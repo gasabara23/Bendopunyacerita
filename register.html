@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register — Komunitas</title>
+    <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+
+<body>
+
+    <div class="auth-container">
+        <h2>Buat Akun Baru</h2>
+
+        <form id="registerForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+
+            <label>Upload Avatar (opsional):</label>
+            <input type="file" id="avatar" accept="image/*">
+
+            <button type="submit" class="btn-primary">Daftar</button>
+        </form>
+
+        <p>Sudah punya akun? <a href="login.html">Masuk</a></p>
+
+        <div id="msg"></div>
+    </div>
+
+    <script src="assets/js/auth.js"></script>
+</body>
+
+</html>

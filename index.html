@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="id" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bendo Punya Cerita — Komunitas</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- GSAP Animasi -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header class="site-header">
+        <nav class="nav container">
+            <a class="brand" href="#">Bendo<span class="dot">.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#features">Fitur</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#forum">Forum</a></li>
+                <li><a href="#events">Event</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="toggle-theme" class="btn-icon">🌙</button>
+                <button id="open-signin" class="btn neon">Masuk</button>
+            </div>
+
+            <button class="hamburger" id="hamburger">☰</button>
+        </nav>
+
+        <!-- HERO -->
+        <div class="hero container">
+            <div class="hero-left">
+                <h1 class="glow">Komunitas Cerita & Kolaborasi</h1>
+                <p class="lead">Tempat berkumpulnya cerita, event, dan diskusi kreatif — dalam nuansa dark + blue electric.</p>
+
+                <div class="hero-cta">
+                    <a class="btn btn-primary neon" href="#forum">Gabung Diskusi</a>
+                    <a class="btn ghost" href="#features">Lihat Fitur</a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="card floating">
+                    <div class="meta">Topik Terbaru</div>
+                    <h3>Tips menulis cepat sehari-hari</h3>
+                    <p class="muted">oleh <strong>@iana</strong> • 2 jam lalu</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FITUR -->
+    <main>
+        <section id="features" class="container section">
+            <h2 class="section-title">Fitur Utama</h2>
+
+            <div class="features-grid">
+                <article class="feature">
+                    <div class="icon">💬</div>
+                    <h3>Forum & Komentar</h3>
+                    <p>Threaded comments, badge admin, dan avatar profil.</p>
+                </article>
+
+                <article class="feature">
+                    <div class="icon">🎫</div>
+                    <h3>Event</h3>
+                    <p>Jadwal acara komunitas dengan RSVP.</p>
+                </article>
+
+                <article class="feature">
+                    <div class="icon">🖼️</div>
+                    <h3>Galeri Interaktif</h3>
+                    <p>Grid responsive dengan animasi hover.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- GALERI -->
+        <section id="gallery" class="container section">
+            <h2 class="section-title">Galeri</h2>
+
+            <div class="masonry">
+                <div class="masonry-item" style="background-image:linear-gradient(135deg,#071026,#002239)"></div>
+                <div class="masonry-item tall" style="background-image:linear-gradient(135deg,#001428,#003b5c)"></div>
+                <div class="masonry-item" style="background-image:linear-gradient(135deg,#021524,#004060)"></div>
+                <div class="masonry-item" style="background-image:linear-gradient(135deg,#081322,#004b6b)"></div>
+            </div>
+        </section>
+
+        <!-- FORUM -->
+        <section id="forum" class="container section">
+            <h2 class="section-title">Forum & Komentar</h2>
+
+            <div class="forum-panel">
+
+                <form id="comment-form" class="comment-form">
+                    <div class="row">
+                        <input type="text" id="username" placeholder="Nama pengguna (contoh: @ghaza)" required>
+                        <input type="text" id="user-badge" placeholder="Badge (opsional)">
+                    </div>
+
+                    <textarea id="comment-input" rows="3" placeholder="Tulis komentar..." required></textarea>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary neon">Kirim</button>
+                        <button type="button" id="clear-comments" class="btn ghost">Hapus semua</button>
+                    </div>
+                </form>
+
+                <div id="comments" class="comments"></div>
+            </div>
+        </section>
+
+        <!-- EVENTS -->
+        <section id="events" class="container section">
+            <h2 class="section-title">Event Mendatang</h2>
+
+            <div class="events-grid">
+                <article class="event-card neon-border">
+                    <h4>Meetup Bulanan</h4>
+                    <p class="muted">12 Desember 2025</p>
+                    <p>Kumpul, diskusi, dan sharing.</p>
+                    <button class="btn">RSVP</button>
+                </article>
+
+                <article class="event-card">
+                    <h4>Workshop Menulis</h4>
+                    <p class="muted">20 Desember 2025</p>
+                    <p>Belajar menulis cepat.</p>
+                    <button class="btn">RSVP</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>Bendo</h3>
+                <p class="muted">Komunitas cerita untuk semua.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Tentang</a>
+                <a href="#">Kontak</a>
+            </div>
+
+            <div class="socials">
+                <button class="icon-btn">Twitter</button>
+                <button class="icon-btn">Discord</button>
+                <button class="icon-btn">Instagram</button>
+            </div>
+        </div>
+
+        <div class="credit">© <span id="year"></span> Bendo</div>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>
